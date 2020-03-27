@@ -33,13 +33,9 @@ public class ChordQualities
     public Transform LightsSource;
     public NoteLight[] lights;
 
-    public KMModSettings settings;
 	#endregion
 	[HideInInspector]
 	public bool isSolved = false;//Not sure what this is used for (probably other modules), but I saw it in Chess.
-
-	#region Settings Defined
-    #endregion
     
 	static int moduleNumber = 1;
 
@@ -73,7 +69,6 @@ public class ChordQualities
 
     void Start() { 
 		thisModuleNumber = moduleNumber++;
-		loadSettings ();
 		GetComponent<KMBombModule>().OnActivate += OnActivate;
         position = UnityEngine.Random.Range(0, 12);
         WheelButton.GetComponent<Transform>().Rotate(new Vector3(0, 1, 0), (position*-360.0f/12.0f));
@@ -255,30 +250,6 @@ public class ChordQualities
 	void LogMessage(string message) {
 		Debug.Log ("[ChordQualities #" + thisModuleNumber +"] " + message);
 	}
- 
-
-	void loadSettings() {
-        /*
-		try {
-			//RhythmsSettings modSettings = JsonConvert.DeserializeObject<RhythmsSettings> (settings.Settings);
-			if (modSettings != null) {
-				colorBlindMode = modSettings.GetColorBlindMode ();
-				int _DebugPattern = modSettings.GetDebugModePattern () - 1;
-				int _DebugColor = modSettings.GetDebugModeColor () - 1;
-				if (_DebugPattern >= 0 & _DebugPattern < patterns.Length) {
-					DebugPattern = _DebugPattern;
-				}
-				if (_DebugColor >= 0 & _DebugColor < colors.Length) {
-					DebugColor = _DebugColor;
-				}
-			} else {
-				LogMessage ("Could not read settings file!");
-			}
-		} catch (JsonReaderException e) {
-			LogMessage ("Malformed settings file! " + e.Message);
-		}
-		*/
-    }
 
     //EDITOR
 

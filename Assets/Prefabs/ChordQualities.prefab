@@ -869,7 +869,6 @@ GameObject:
   - component: {fileID: 114000013737426696}
   - component: {fileID: 114000011393861820}
   - component: {fileID: 114000012738418648}
-  - component: {fileID: 114000012664207198}
   m_Layer: 0
   m_Name: ChordQualities
   m_TagString: mod.bundle
@@ -7363,19 +7362,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShaderNames:
   - GUI/KT 3D Text
---- !u!114 &114000012664207198
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011750831358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -289456416, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Settings: '{"ColorBlindMode": true}'
-  SettingsPath: 
 --- !u!114 &114000012680439428
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7451,7 +7437,7 @@ MonoBehaviour:
   WheelButton: {fileID: 114000011120518748}
   SelectButton: {fileID: 114000011640778284}
   SubmitButton: {fileID: 114000010023663996}
-  lightPrefab: {fileID: 4000012527806844, guid: 3f8739a8cf5906642bf24f4463d968fa,
+  lightPrefab: {fileID: 4865983858798338, guid: aaeaf88ae30093546800b1a8ac9f163b,
     type: 2}
   LightsSource: {fileID: 4000011399463892}
   lights:
@@ -7467,7 +7453,6 @@ MonoBehaviour:
   - {fileID: 114000012846916380}
   - {fileID: 114000011492511848}
   - {fileID: 114000013292993874}
-  settings: {fileID: 114000012664207198}
   isSolved: 0
 --- !u!114 &114000012758431746
 MonoBehaviour:
